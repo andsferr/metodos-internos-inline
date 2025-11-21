@@ -7,37 +7,41 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Página 1 — Exemplo</title>
 
-  <!-- Link para o CSS externo (o mesmo será usado em pagina2.html) -->
+  
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Estilo interno específico desta página (exemplo de 'internal') -->
+  <!-- CSS interno (dentro do HTML)-->
   <style>
-    /* sobrescreve temporariamente o background do header só nesta página */
-    .header { background: linear-gradient(90deg,#ffffff,#e8f9f9); }
+    .header { background: linear-gradient(90deg,#04f3a3,#f81b0b); }
     /* classe local só para página1 */
-    .page1-special { border-left: 4px solid var(--accent); padding-left:12px; }
+    .page1-special { border-left: 40px solid var(--accent); padding-left:12px; }
   </style>
 </head>
-<body>
+
+<!-- CSS inline (Dentro do HTML) -->
+<body style="background-color: rgb(240, 89, 215); text-align: center;" >
+  
+
   <header class="header">
-    <div class="logo">MeuSite</div>
+    <!-- CSS inline (dentro do HTML)-->
+    <div class="logo" style="background-color: blue; color: white;">Exemplo métodos internos e inline</div>
     <nav class="nav">
-      <a href="pagina1.html">Página 1</a>
-      <a href="pagina2.html">Página 2</a>
-    </nav>
+      <a href="pagina1.html" style="background-color: aqua;">Página 1</a>
+      <a href="pagina2.html" style="background-color: red;">Página 2</a>
   </header>
 
   <main class="container">
     <section class="card">
-      <h1 class="title-blue">Bem-vindo à Página 1</h1>
-      <p class="page1-special">
-        Este parágrafo mostra <strong>estilo interno</strong> (definido no &lt;style&gt; do head)
-        e é afetado também pelo CSS externo.
+      <h1 class="title-blue" style="background-color: yellow; padding: 15px; border-radius: 10px;">Métodos internos e inline</h1>
+      <p class="page1-special" style="background-color: rgb(24, 240, 60); padding: 15px; border-radius: 10px;" >
+Quais os principais métodos utilizados tanto em classes específicas quando compartilhados entre arquivos diferentes?
       </p>
 
       <p style="color: #111; font-weight:600;">
         Exemplo de estilo <em>inline</em>: este parágrafo tem `style="..."` diretamente no elemento.
       </p>
+      <p>
+        Exemplo de estilo <em>internal</em>:</p>
     </section>
 
     <aside class="aside">
@@ -47,7 +51,8 @@
       </div>
       <div class="card">
         <h4 class="center">Ação</h4>
-        <button style="padding:10px 16px; border-radius:8px; border:none; cursor:pointer;">
+        <!-- CSS inline (dentro do HTML)-->
+        <button style="background-color: blue; color: white; border-radius: 15px; padding: 10px;">
           Botão com inline
         </button>
       </div>
