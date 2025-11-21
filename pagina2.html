@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Página 2 — Exemplo</title>
+
+  <!-- Mesma folha externa -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Aqui NÃO usamos estilos internos, pra mostrar que o externo já é suficiente -->
+</head>
+<body>
+  <header class="header">
+    <div class="logo">MeuSite</div>
+    <nav class="nav">
+      <a href="pagina1.html">Página 1</a>
+      <a href="pagina2.html">Página 2</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1 class="title-blue">Página 2 — Mesmo CSS</h1>
+      <p>
+        Esta página demonstra que o mesmo arquivo <code>styles.css</code> controla o visual.
+        Não tem estilos internos — tudo vem do arquivo externo.
+      </p>
+
+      <h3>Exemplo de classes reutilizadas</h3>
+      <ul>
+        <li>Cards</li>
+        <li>Header</li>
+        <li>Responsividade</li>
+      </ul>
+    </section>
+
+    <aside class="aside">
+      <div class="card">
+        <h4>Contato</h4>
+        <p>Telefone: (00) 0000-0000</p>
+        <p style="font-style:italic;">Observação com estilo inline.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer card">
+    Rodapé idêntico — vindo do mesmo CSS.
+  </footer>
+</body>
+</html>

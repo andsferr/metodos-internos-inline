@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Página 1 — Exemplo</title>
+
+  <!-- Link para o CSS externo (o mesmo será usado em pagina2.html) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Estilo interno específico desta página (exemplo de 'internal') -->
+  <style>
+    /* sobrescreve temporariamente o background do header só nesta página */
+    .header { background: linear-gradient(90deg,#ffffff,#e8f9f9); }
+    /* classe local só para página1 */
+    .page1-special { border-left: 4px solid var(--accent); padding-left:12px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">MeuSite</div>
+    <nav class="nav">
+      <a href="pagina1.html">Página 1</a>
+      <a href="pagina2.html">Página 2</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1 class="title-blue">Bem-vindo à Página 1</h1>
+      <p class="page1-special">
+        Este parágrafo mostra <strong>estilo interno</strong> (definido no &lt;style&gt; do head)
+        e é afetado também pelo CSS externo.
+      </p>
+
+      <p style="color: #111; font-weight:600;">
+        Exemplo de estilo <em>inline</em>: este parágrafo tem `style="..."` diretamente no elemento.
+      </p>
+    </section>
+
+    <aside class="aside">
+      <div class="card">
+        <h3>Informações</h3>
+        <p>Conteúdo da barra lateral — também estilizado pelo mesmo styles.css.</p>
+      </div>
+      <div class="card">
+        <h4 class="center">Ação</h4>
+        <button style="padding:10px 16px; border-radius:8px; border:none; cursor:pointer;">
+          Botão com inline
+        </button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer card">
+    Rodapé compartilhado — mesmo CSS em ambas as páginas.
+  </footer>
+</body>
+</html>
